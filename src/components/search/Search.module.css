@@ -1,0 +1,18 @@
+.search {
+  height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  padding: 12px;
+  height: 100%;
+}
+
+.avatarImage {
+  display: block;
+  border-radius: 50%;
+  height: 100%;
+  aspect-ratio: 1;
+  background: var(--tg-theme-hint-color);
+}
