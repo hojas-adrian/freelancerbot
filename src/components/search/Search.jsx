@@ -17,9 +17,6 @@ export default function Search() {
     <div className={style.search}>
       <FilterMenu />
       <Input />
-      <Button className={style.avatar}>
-        <img className={style.avatarImage} src={"/user.svg"} alt="avatar" />
-      </Button>
     </div>
   );
 }

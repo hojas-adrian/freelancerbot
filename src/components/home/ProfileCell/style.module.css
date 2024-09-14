@@ -1,0 +1,7 @@
+.cell {
+  scroll-snap-align: start;
+}
+
+.description {
+  font-size: var(--tgui--subheadline2--font_size);
+}

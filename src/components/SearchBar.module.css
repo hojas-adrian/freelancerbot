@@ -1,12 +1,21 @@
-.header {
-  border-radius: 14px;
-  background: var(--tgui--bg_color);
-  font-size: var(--tgui--text--font_size);
+.tabbar {
+  /* 
   line-height: var(--tgui--text--line_height);
+  */
+  z-index: 9;
+  font-size: var(--tgui--text--font_size);
   font-family: var(--tgui--font-family);
-  color: white;
-}
 
-.headerShadow {
-  filter: drop-shadow(0 0 2.5px #00000025);
+  flex-wrap: wrap;
+
+  /* background: var(--tgui--surface_primary); */
+  background: var(--tgui--bg_color);
+  box-shadow: 0 -1px 0 var(--tgui--divider);
+  display: flex;
+  justify-items: stretch;
+  padding: 16px 16px 0;
+
+  & > :first-child {
+    width: 100%;
+  }
 }
