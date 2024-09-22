@@ -2,38 +2,27 @@ import {
   Avatar,
   Caption,
   Cell,
+  Image,
   Subheadline,
   Text,
 } from "@telegram-apps/telegram-ui";
 import style from "../ProfileCell/style.module.css";
+import Score from "@/components/Score";
 
-export default function ProfileCell({
-  type,
-}: {
-  type: "popularCell" | "newCell";
-}) {
+export default function ProfileCell() {
   return (
     <Cell
-      className={type === "popularCell" ? style.cell : ""}
-      subtitle={
-        type === "popularCell" ? (
-          <Text className={style.description}>
-            Fullstack Developer & Backend Developer
-          </Text>
-        ) : (
-          <Subheadline level="2">
-            Fullstack Developer & Backend Developer
-          </Subheadline>
-        )
-      }
+      className={style.cell}
+      subtitle={<Score />}
       before={
-        <Avatar
-          size={40}
+        <Image
+          alt="sd"
+          size={48}
           src="https://avatars.githubusercontent.com/u/84640980?v=4"
         />
       }
     >
-      <Caption weight="1">ross96D</Caption>
+      <Caption weight="1">Hamster Kombat</Caption>
     </Cell>
   );
 }

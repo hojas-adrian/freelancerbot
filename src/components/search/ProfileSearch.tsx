@@ -5,11 +5,13 @@ import {
   Chip,
   Headline,
   IconButton,
+  Image,
   Subheadline,
 } from "@telegram-apps/telegram-ui";
 import { Icon28Chat } from "@telegram-apps/telegram-ui/dist/icons/28/chat";
+import Score from "../Score";
 
-export default function search() {
+export default function ProfileSearch() {
   return (
     <div
       style={{
@@ -22,22 +24,26 @@ export default function search() {
       <Cell
         interactiveAnimation="background"
         before={
-          <Avatar
+          <Image
+            alt=""
             size={48}
             src="https://avatars.githubusercontent.com/u/84640980?v=4"
           />
         }
-        subtitle={
-          <Subheadline level="2">
-            Fullstack Developer & Backend Developer
-          </Subheadline>
-        }
+        subtitle={<Score />}
         after={
-          <div style={{ width: 45 }}>
-            <IconButton size="l" mode="bezeled">
-              <Icon28Chat />
-            </IconButton>
-          </div>
+          <IconButton size="l" mode="bezeled">
+            <div
+              style={{
+                width: 38,
+                height: 38,
+                fontSize: "1.5em",
+                alignContent: "center",
+              }}
+            >
+              🎮
+            </div>
+          </IconButton>
         }
       >
         <Headline weight="1">ross96D</Headline>
@@ -46,6 +52,7 @@ export default function search() {
         style={{
           display: "flex",
           overflow: "scroll",
+          scrollBehavior: "smooth",
           flexWrap: "nowrap",
           paddingBlock: 2,
           alignItems: "flex-start",
@@ -53,14 +60,15 @@ export default function search() {
         }}
       >
         <div style={{ display: "flex", gap: 8 }}>
-          <Chip mode="outline">JavaScript</Chip>
-          <Chip mode="outline">Go</Chip>
-          <Chip mode="outline">Dart</Chip>
-          <Chip mode="outline">Python</Chip>
-          <Chip mode="outline">Lua</Chip>
-          <Chip mode="outline">Rust</Chip>
-          <Chip mode="outline">Action</Chip>
-          <Chip mode="outline">Action</Chip>
+          <Chip mode="outline" style={{ minWidth: "max-content" }}>
+            🫵 <span style={{ marginLeft: 10 }}>Clicker</span>
+          </Chip>
+          <Chip mode="outline" style={{ minWidth: "max-content" }}>
+            ⏲️ <span style={{ marginLeft: 10 }}>Timer</span>
+          </Chip>
+          <Chip mode="outline" style={{ minWidth: "max-content" }}>
+            📈 <span style={{ marginLeft: 10 }}>update pph</span>
+          </Chip>
         </div>
       </ButtonCell>
     </div>

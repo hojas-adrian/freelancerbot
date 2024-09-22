@@ -1,27 +1,20 @@
-"use client";
-
-import { Tabbar, TabsList } from "@telegram-apps/telegram-ui";
-import Search from "./search/Search";
+import { Tabbar } from "@telegram-apps/telegram-ui";
+import Search from "./del_search/Search";
 import style from "./SearchBar.module.css";
-import { TabsItem } from "@telegram-apps/telegram-ui/dist/components/Navigation/TabsList/components/TabsItem/TabsItem";
-import { TabbarItem } from "@telegram-apps/telegram-ui/dist/components/Layout/Tabbar/components/TabbarItem/TabbarItem";
-import { Icon28Devices } from "@telegram-apps/telegram-ui/dist/icons/28/devices";
+import TabItem from "./TabItem";
 
 export default function Header() {
+  const tabItems = [
+    { name: "home", href: "", type: "button", key: "0", label: "🏠" },
+    { name: "search", href: "buscar", type: "button", key: "0", label: "🔍" },
+    { name: "saved", href: "saved", type: "button", key: "0", label: "🗃️" },
+  ];
   return (
-    <>
-      <Tabbar className={style.tabbar}>
-        <Search />
-        <TabbarItem text="Hello" selected>
-          <Icon28Devices />
-        </TabbarItem>
-        <TabbarItem text="Hello">
-          <Icon28Devices />
-        </TabbarItem>
-        <Tabbar.Item text="Hello">
-          <Icon28Devices />
-        </Tabbar.Item>
-      </Tabbar>
-    </>
+    <Tabbar className={style.tabbar}>
+      <Search />
+      {tabItems.map((e) => (
+        <TabItem key={e.name} name={e.name} href={e.href} label={e.label} />
+      ))}
+    </Tabbar>
   );
 }

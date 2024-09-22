@@ -16,25 +16,45 @@ export default function BestProfiles() {
   return (
     <div style={{ borderRadius: 18, overflow: "hidden" }}>
       <Section>
-        <SectionHeader
-          large
-          style={{ display: "flex", justifyContent: "space-between" }}
-        >
-          Usual title{" "}
-          <Button mode="plain" size="s">
-            All
-          </Button>
+        <SectionHeader large>
+          <div
+            style={{
+              display: "flex",
+              fontSize: "1.2em",
+              alignItems: "center",
+              width: "100%",
+            }}
+          >
+            <img
+              style={{
+                width: 50,
+                height: 40,
+                objectFit: "contain",
+                objectPosition: 0,
+              }}
+              src="https://em-content.zobj.net/source/telegram/358/calendar_1f4c5.webp"
+              alt="click"
+            />
+            Daily loggin
+            <Button
+              style={{ alignSelf: "end", marginLeft: "auto" }}
+              mode="plain"
+              size="s"
+            >
+              See all ↗
+            </Button>
+          </div>
         </SectionHeader>
         <div className={style.container}>
-          <ProfileCell type="popularCell" />
-          <ProfileCell type="popularCell" />
-          <ProfileCell type="popularCell" />
-          <ProfileCell type="popularCell" />
-          <ProfileCell type="popularCell" />
-          <ProfileCell type="popularCell" />
-          <ProfileCell type="popularCell" />
-          <ProfileCell type="popularCell" />
-          <ProfileCell type="popularCell" />
+          <ProfileCell />
+          <ProfileCell />
+          <ProfileCell />
+          <ProfileCell />
+          <ProfileCell />
+          <ProfileCell />
+          <ProfileCell />
+          <ProfileCell />
+          <ProfileCell />
         </div>
       </Section>
     </div>

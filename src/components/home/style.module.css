@@ -4,6 +4,7 @@
   grid-template-rows: 1fr 1fr 1fr;
   grid-auto-flow: column;
   overflow: scroll;
+  scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   padding: 0 50px 15px 0;
 }

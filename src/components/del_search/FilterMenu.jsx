@@ -1,3 +1,5 @@
+"use client";
+
 // import { getC } from "@/api/supabase";
 import { useClientOnce } from "@/hooks/useClientOnce";
 import { usePathname, useSearchParams, useRouter } from "next/navigation";

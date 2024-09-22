@@ -2,10 +2,11 @@ import type { PropsWithChildren } from "react";
 import type { Metadata } from "next";
 
 import { Root } from "@/components/Root/Root";
+import SearchBar from "@/components/SearchBar";
 
 import "@telegram-apps/telegram-ui/dist/styles.css";
 import "normalize.css/normalize.css";
-import "./_assets/globals.css";
+import "../_assets/globals.css";
 
 export const metadata: Metadata = {
   title: "Your Application Title Goes Here",
@@ -16,7 +17,10 @@ export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
       <body>
-        <Root>{children}</Root>
+        <Root>
+          <main style={{ paddingBlockEnd: 160 }}>{children}</main>
+          <SearchBar />
+        </Root>
       </body>
     </html>
   );

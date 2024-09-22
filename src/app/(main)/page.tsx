@@ -7,7 +7,6 @@ import {
   CompactPagination,
 } from "@telegram-apps/telegram-ui";
 
-import SearchBar from "@/components/SearchBar";
 import { SectionFooter } from "@telegram-apps/telegram-ui/dist/components/Blocks/Section/components/SectionFooter/SectionFooter";
 import { CompactPaginationItem } from "@telegram-apps/telegram-ui/dist/components/Navigation/CompactPagination/components/CompactPaginationItem/CompactPaginationItem";
 import BestProfiles from "@/components/home/BestProfiles";
@@ -75,8 +74,6 @@ export default function Home() {
         <BestProfiles />
         <BestProfiles />
       </div>
-
-      <SearchBar />
     </div>
   );
 }
