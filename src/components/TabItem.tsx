@@ -2,15 +2,15 @@
 
 import { useRouter, usePathname } from "next/navigation";
 import { TabbarItem } from "@telegram-apps/telegram-ui/dist/components/Layout/Tabbar/components/TabbarItem/TabbarItem";
-import { Icon28Devices } from "@telegram-apps/telegram-ui/dist/icons/28/devices";
+import { TabsItemProps } from "@telegram-apps/telegram-ui/dist/components/Navigation/TabsList/components/TabsItem/TabsItem";
 
 interface props {
-  name: string;
+  text: string;
   href: string;
-  label: string;
+  icon: string;
 }
 
-export default function TabItem({ name, href, label }: props) {
+export default function TabItem({ text, href, icon }: props): TabsItemProps {
   const router = useRouter();
   const path = usePathname();
 
@@ -18,10 +18,10 @@ export default function TabItem({ name, href, label }: props) {
     <TabbarItem
       selected={path === `/${href}`}
       style={{ paddingInline: 10 }}
-      text={name}
+      text={text}
       onClick={() => router.push(`/${href}`)}
     >
-      {label}
+      {icon}
     </TabbarItem>
   );
 }
