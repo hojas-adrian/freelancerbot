@@ -1,16 +1,5 @@
-import ProfileSearch from "@/components/search/ProfileSearch";
+import Content from "./Content";
 
 export default function search() {
-  return (
-    <>
-      <ProfileSearch />
-      <ProfileSearch />
-      <ProfileSearch />
-      <ProfileSearch />
-      <ProfileSearch />
-      <ProfileSearch />
-      <ProfileSearch />
-      <ProfileSearch />
-    </>
-  );
+  return <Content />;
 }
